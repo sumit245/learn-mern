@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Mytable() {
+export default function Mytable({message}) {
     const [userName, setUserName] = useState("Sumit")
     const [inputField, setInputField] = useState("")
     
@@ -11,12 +11,15 @@ export default function Mytable() {
     return (
         <div>
             <p>{userName}</p>
+            <p>{message}</p>
             <input type="text" onChange={({target}) => { setInputField(target.value)}}/>
-
             <input type="button" value="Change UserName" onClick={changeUserName} />
         </div>
     )
 }
+
+
+
 
 // State is a variable or data that is accessible by the component itself
 // Prop is the attribute for a component that is passed to child component as argument
