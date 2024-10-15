@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import IconButton from "./components/buttons/IconButton"
 
 export default function MyForm() {
     const [a, setA] = useState(0)
@@ -7,6 +8,9 @@ export default function MyForm() {
     const [result, setResult] = useState(0)
     return (
         <div id="formContainer">
+            {/* <IconButton icon="fa-youtube" name="Youtube" onClick={() => alert('You pressed youtube')} />
+            <IconButton icon="fa-facebook" styles={{ color: 'blue', fontSize: 20 }} name="Facebook" onClick={() => alert('You pressed Facebook')} />
+            <IconButton icon="fa-twitter" styles={{ color: 'green' }} name="Linkedin" onClick={() => alert("You pressed twitter")} /> */}
             <div className="form-group">
                 <label className="control-label" htmlFor="a">Enter A:</label>
                 <input className="form-control" value={a} id="a" onChange={({ target }) => setA(target.value)} />
